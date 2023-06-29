@@ -1,3 +1,4 @@
+/* The Register class is a JavaScript class that represents a register with a name and a value. */
 class Register {
 
     constructor(name, value) {

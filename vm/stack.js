@@ -1,3 +1,4 @@
+/* The Stack class is a JavaScript implementation of a stack data structure. */
 class Stack {
 
     stack = []
