@@ -17,39 +17,29 @@ class VM {
         ]
     }
 
-    add_mnemonic(a, b) {
-        if (!this.pc)
-            return (null)
+    add_mnemonic(a) {
 
-        return a + b
+        return a[0] + a[1]
     }
 
-    sub_mnemonic(a, b) {
-        if (!this.pc)
-            return (null)
+    sub_mnemonic(a) {
 
-        return a - b
+        return a[0] - a[1]
     }
 
     div_mnemonic(a, b) {
-        if (!this.pc)
-            return (null)
 
-        return a / b
+        return a[0] / a[1]
     }
 
     mod_mnemonic(a, b) {
-        if (!this.pc)
-            return (null)
 
-        return a % b
+        return a[0] % a[1]
     }   
 
     mul_mnemonic(a, b) {
-        if (!this.pc)
-            return (null)
 
-        return a * b
+        return a[0] * a[1]
     }
 
     constructor() {
@@ -83,7 +73,7 @@ class VM {
                 throw new Error(`Unknow bytecode [${this.bytecodes[this.pc.getValue()]}]`)
 
 
-            console.log(bytecode)
+            console.log(bytecode.exec(1, 2))
             
 
             this.pc.value+=8

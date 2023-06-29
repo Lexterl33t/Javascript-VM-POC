@@ -12,7 +12,7 @@ class Bytecode {
 
     exec(...args) {
         
-        this.act(args)
+        return this.act(args)
     }
 }
 
